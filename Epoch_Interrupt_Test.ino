@@ -128,5 +128,8 @@ void loop() {
   
   __WFI(); // Now wait for interrupt.
 
+//  USBDevice.attach();   // Re-attach the USB, audible sound on windows machines
+//  enableUSB();
+
   digitalWrite(LED, rtcRead ? HIGH : LOW);
 }
