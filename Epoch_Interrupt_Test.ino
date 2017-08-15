@@ -112,8 +112,8 @@ void loop() {
   //wait-for-interrupt has no effect unless the sleep bit is set in the
   //System Control Register (SCR)(see setup, in the attachInterrupt area)
   //if the sleep bit is set, we wait after this instruction for an interrupt 
-  PM->SLEEP.reg |= PM_SLEEP_IDLE_CPU;
-//  PM->SLEEP.reg |= PM_SLEEP_IDLE_APB;
+//  PM->SLEEP.reg |= PM_SLEEP_IDLE_CPU;
+  PM->SLEEP.reg |= PM_SLEEP_IDLE_APB;
 
   SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;  // set to deep sleep (bit-1)
 
